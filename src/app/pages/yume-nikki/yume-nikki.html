@@ -1,0 +1,174 @@
+<div class="yume-nikki-page">
+
+  <section class="layout">
+
+    <!-- PANEL IZQUIERDO -->
+    <aside class="left-panel">
+
+      <div class="box contacto-box">
+
+        <h3>Contacto</h3>
+
+        <div class="icons">
+
+          <i class="bi bi-facebook"></i>
+
+          <i class="bi bi-instagram"></i>
+
+          <i class="bi bi-discord"></i>
+
+        </div>
+
+      </div>
+
+    </aside>
+
+
+    <!-- PANEL CENTRAL -->
+    <main class="center-panel">
+
+      <section class="content-container dream-container">
+
+        <div class="text-center">
+
+          <img src="https://media.tenor.com/SiVAwPLtkfoAAAAM/yume-nikki-life-of-madotsuki.gif" class="dream-image">
+
+        </div>
+
+
+        <h3 class="title">
+
+          <i class="bi bi-moon-stars-fill"></i>
+
+          ¿Tuviste un sueño extraño?
+
+        </h3>
+
+
+        <p class="subtitle">
+
+          Cuéntanos tu experiencia
+
+        </p>
+
+
+        <form
+          #dreamForm="ngForm"
+          (ngSubmit)="onSubmit(dreamForm)"
+          novalidate
+        >
+
+          <!-- NOMBRE -->
+
+          <div class="form-group">
+
+            <label>
+
+              <i class="bi bi-person-fill"></i>
+
+              Nombre
+
+            </label>
+
+
+            <input
+              type="text"
+              name="nombre"
+              [(ngModel)]="dreamData.nombre"
+              #nombre="ngModel"
+              required
+              minlength="3"
+              maxlength="20"
+              pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$"
+              class="form-control"
+              [class.is-invalid]="nombre.invalid && (nombre.touched || enviado)"
+              [class.is-valid]="nombre.valid"
+            >
+
+
+            <div class="error" *ngIf="nombre.invalid && (nombre.touched || enviado)">
+
+              <div *ngIf="nombre.errors?.['required']">
+                El nombre es obligatorio
+              </div>
+
+              <div *ngIf="nombre.errors?.['minlength']">
+                mínimo 3 caracteres
+              </div>
+
+              <div *ngIf="nombre.errors?.['maxlength']">
+                máximo 20 caracteres
+              </div>
+
+              <div *ngIf="nombre.errors?.['pattern']">
+                solo letras permitidas
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- DESCRIPCION -->
+
+          <div class="form-group">
+
+            <label>
+
+              <i class="bi bi-pencil-fill"></i>
+
+              Descripción
+
+            </label>
+
+
+            <textarea
+              name="descripcion"
+              [(ngModel)]="dreamData.descripcion"
+              #descripcion="ngModel"
+              required
+              minlength="10"
+              maxlength="200"
+              rows="5"
+              class="form-control"
+              [class.is-invalid]="descripcion.invalid && (descripcion.touched || enviado)"
+              [class.is-valid]="descripcion.valid"
+            ></textarea>
+
+
+            <div class="error" *ngIf="descripcion.invalid && (descripcion.touched || enviado)">
+
+              <div *ngIf="descripcion.errors?.['required']">
+                La descripción es obligatoria
+              </div>
+
+              <div *ngIf="descripcion.errors?.['minlength']">
+                mínimo 10 caracteres
+              </div>
+
+              <div *ngIf="descripcion.errors?.['maxlength']">
+                máximo 200 caracteres
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <button type="submit" class="dream-button">
+
+            <i class="bi bi-send-fill"></i>
+
+            Enviar sueño
+
+          </button>
+
+        </form>
+
+      </section>
+
+    </main>
+
+  </section>
+
+</div>

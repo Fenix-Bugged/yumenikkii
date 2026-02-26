@@ -1,1 +1,130 @@
-/* You can add global styles to this file, and also import other style files */
+/* ===== GLOBAL ===== */
+
+body {
+  margin: 0;
+  padding: 0;
+
+  background-image: url("https://images.steamusercontent.com/ugc/868481724758037772/196A9CCBE44119005E21F6A5BBA353FFE1E835EB/?imw=512&imh=331&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: -1;
+}
+
+/* ===== LAYOUT GENERAL ===== */
+
+.layout {
+  display: grid;
+  grid-template-columns: 250px 1fr 250px;
+  gap: 30px;
+  width: 95%;
+  margin: 40px auto;
+}
+
+.center-panel {
+  display: flex;
+  justify-content: center;
+}
+
+/* ===== PANEL CENTRAL ===== */
+
+.content-container {
+  width: 100%;
+  padding: 30px;
+  background: rgb(70, 20, 50);
+  color: white;
+}
+
+/* Intro sección */
+
+.intro {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.character{
+  width: 150px;
+  image-rendering: pixelated;
+}
+
+.info {
+  margin-top: 40px;
+  line-height: 1.6;
+}
+
+/* ===== PANELES LATERALES ===== */
+
+.box {
+  background: rgba(90, 40, 100, 0.85);
+  padding: 20px;
+  border-radius: 12px;
+  color: white;
+  margin-bottom: 20px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== REPRODUCTOR ===== */
+
+.controls {
+  display: flex;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.controls button {
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  padding: 10px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.controls button:hover {
+  background: rgba(255, 255, 255, 0.35);
+  transform: scale(1.1);
+}
+
+/* ===== LISTA DE TEMAS ===== */
+
+.dictionary-box ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.dictionary-box li {
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.dictionary-box li:hover {
+  color: #ffb3ff;
+  transform: translateX(5px);
+}
+/* fondo negro completo */
+.dark-page {
+  background-color: black !important;
+  background-image: none !important;
+}
+
+/* asegurar que todo el viewport sea negro */
+.dark-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: black;
+  z-index: -1;
+}

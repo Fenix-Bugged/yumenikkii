@@ -1,0 +1,213 @@
+/* PAGINA NEGRA */
+.yume-nikki-page {
+
+  background: black;
+
+  min-height: 100vh;
+
+}
+
+
+/* LAYOUT GENERAL */
+
+.layout {
+
+  display: grid;
+
+  grid-template-columns: 250px 1fr;
+
+  gap: 20px;
+
+  padding: 20px;
+
+}
+
+
+/* PANEL IZQUIERDO */
+
+.left-panel {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+
+}
+
+
+.box {
+
+  background: rgba(90, 50, 90, 0.7);
+
+  padding: 20px;
+
+  border-radius: 10px;
+
+  color: white;
+
+}
+
+
+/* ICONOS */
+
+.icons {
+
+  display: flex;
+
+  gap: 15px;
+
+  font-size: 24px;
+
+}
+
+
+/* PANEL CENTRAL */
+
+.center-panel {
+
+  display: flex;
+
+  justify-content: center;
+
+}
+
+
+/* CONTENEDOR */
+
+.content-container {
+
+  background: rgba(60, 0, 30, 0.8);
+
+  padding: 30px;
+
+  border-radius: 10px;
+
+  width: 500px;
+
+  color: white;
+
+}
+
+
+/* IMAGEN */
+
+.dream-image {
+
+  width: 300px;
+
+  margin-bottom: 10px;
+
+  display: block;
+  
+  margin-left: auto;
+
+  margin-right: auto;
+
+}
+
+
+/* TITULO */
+
+.title {
+
+  text-align: center;
+
+  margin-bottom: 10px;
+
+}
+
+
+/* SUBTITULO */
+
+.subtitle {
+
+  text-align: center;
+
+  margin-bottom: 20px;
+
+}
+
+
+/* FORM */
+
+.form-group {
+
+  margin-bottom: 15px;
+
+}
+
+
+/* INPUT */
+
+.form-control {
+
+  width: 100%;
+
+  padding: 8px;
+
+  background: #111;
+
+  border: 1px solid #ff4da6;
+
+  color: white;
+
+  border-radius: 5px;
+
+}
+
+
+/* BOTON */
+
+.dream-button {
+
+  width: 100%;
+
+  padding: 10px;
+
+  border: none;
+
+  background: #a83279;
+
+  color: white;
+
+  border-radius: 5px;
+
+  cursor: pointer;
+
+}
+
+
+.dream-button:hover {
+
+  background: #c94c94;
+
+}
+
+
+/* ERRORES */
+
+.error {
+
+  color: red;
+
+  font-size: 13px;
+
+  margin-top: 5px;
+
+}
+
+
+/* VALIDACION */
+
+.is-invalid {
+
+  border-color: red;
+
+}
+
+.is-valid {
+
+  border-color: #00ff99;
+
+}
